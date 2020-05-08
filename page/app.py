@@ -16,7 +16,7 @@ class App(BasePage):
             caps["deviceName"] = "hogwarts"
             caps["appPackage"] = self._package
             caps["appActivity"] = self._activity
-            caps["noReset"] = True
+            caps["noReset"] = False
             caps['udid'] = yaml.safe_load(open("../page/configuration.yaml"))['caps']['udid']
             # 初始化driver
             self._driver = webdriver.Remote(
